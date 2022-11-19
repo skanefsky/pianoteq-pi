@@ -1,14 +1,14 @@
 # pianoteq-sff
 
-> Script to install and run [Pianoteq](https://pianoteq.com/) in a headless configuration (i.e. no keyboard/monitor/mouse) on small-form-factor (SFF) computers running Raspberry Pi OS or Ubuntu MATE.  Other distributions may work but have not been tested.
+> Script to install and run [Pianoteq](https://pianoteq.com/) in a headless configuration (i.e. no keyboard/monitor/mouse) on small-form-factor (SFF) computers running Raspberry Pi OS or Ubuntu MATE (other distributions may work but have not been tested).
 
-> Based on youfou's pianoteq-pi with updates to support the current release of Raspberry Pi OS and Ubunto MATE as of November 2022.
+> Based on youfou's pianoteq-pi with updates to support the current release of Raspberry Pi OS (as of November 2022) and new support for Ubuntu MATE.
 
 ## How to use
 
 1a. Install your preferred Linux distribution:
    - [Raspberry Pi OS (64 bit)](https://downloads.raspberrypi.org/raspios_arm64/images/) for Raspberry Pi.
-   - [Ubuntu MATE (64-bit)] for Raspberry Pi or other SFF computer such as [MeLE Quieter3C](https://ww.amazon.com/gp/product/B0B765VF84)
+   - [Ubuntu MATE (64-bit)](https://ubuntu-mate.org/download/) for Raspberry Pi or other SFF computer such as [MeLE Quieter3C](https://ww.amazon.com/gp/product/B0B765VF84)
    - 
 3. Download Pianoteq from [the official website](https://pianoteq.com/) onto your SFF (either demo or licensed copy will work).
 4. Run the following command in the same folder of the 7z/zip package:
