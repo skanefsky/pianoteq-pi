@@ -6,16 +6,15 @@
 
 ## How to use
 
-1a. Install your preferred Linux distribution:
+1. Install your preferred Linux distribution:
    - [Raspberry Pi OS (64 bit) with desktop](https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-64-bit) for Raspberry Pi.
-   - [Ubuntu MATE (64-bit)](https://ubuntu-mate.org/download/) for Raspberry Pi or other SFF computer such as [MeLE Quieter3C](https://ww.amazon.com/gp/product/B0B765VF84)
-   - 
-3. Download Pianoteq from [the official website](https://pianoteq.com/) onto your SFF (either demo or licensed copy will work).
-4. Run the following command in the same folder of the 7z/zip package:
+   - [Ubuntu MATE (64-bit)](https://ubuntu-mate.org/download/) for Raspberry Pi or other SFF computer such as [MeLE Quieter3C](https://www.amazon.com/gp/product/B0B765VF84)
+2. Download Pianoteq from [the official website](https://pianoteq.com/) onto your SFF (either demo or licensed copy will work).
+3. Download the [setup script](https://raw.githubusercontent.com/skanefsky/pianoteq-sff/main/setup.py) from this project into the same directory
+4. Run the setup script:
 ```shell
-wget -qO setup.py https://git.io/JqVD6 && sudo python3 setup.py
+sudo python3 setup.py
 ```
-Simple as that.
 
 After installed in this way, Pianoteq will run headlessly (No GUI, to get better performance) on every system boot.
 If you want to adjust something on it, just double click the desktop icon to open GUI.
