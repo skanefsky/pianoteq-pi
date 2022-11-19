@@ -21,10 +21,6 @@ If you want to adjust something on it, just double click the desktop icon to ope
 
 ## What this script actually does?
 
-
-- Installs dependencies:
-   - `linux-image-lowlatency` - low latency linux kernel for better performance (optional, Ubuntu only)
-
 - Installs Pianoteq:
   - Installs `p7zip-full` to extract the Pianoteq 7z/zip package
   - Extracts the Pianoteq 7z/zip package in your preferred location.
@@ -32,17 +28,19 @@ If you want to adjust something on it, just double click the desktop icon to ope
   - Adds permissions in /etc/sudoers.d for the user to start/stop the Pianoteq service
   - Creates a desktop icon and a start.sh script for Pianoteq, so you can open the GUI easily by clicking the icon.
 
-- Configures performance optimizations
+- Installs/Configures Performance Optimizations
   - Installs `cpufrequtils` to allow CPU performance to be configured.
   - Creates a service to set the CPU to performance mode at boot time.
   - Disables smsc95xx.turbo_mode as Pianoteq officially advised (Raspberry Pi OS only)
-  - Modifies the "account limits" as Modartt officially advises
-  - Overclocks the CPU to 2000 MHz at the 6th voltage level to get better performance as well (optional, Raspberry Pi OS only)
-  - Installs `linux-image-lowlatency` kernel to improve Pianoteq performance (optional, Ubuntu only).
+  - Modifies `/etc/security/limits.conf` as Modartt officially advises
+  - Overclocks the CPU to 2000 MHz for get better performance (optional, Raspberry Pi OS only)
+  - Installs `linux-image-lowlatency` kernel to improve performance (optional, Ubuntu only).
 
-- Configures remote access for VNC and ssh access:
-  - Installs `x11vnc` and `openssh-server` for remote access when running headless (optional, Ubuntu only)
-  - Set default resolution so that you can run Pianoteq while not connecting to a display
+- Installs/Configures Remote Access:
+  - Installs `x11vnc` for GUI remote access using any VNC client (optional, Ubuntu only)
+  - Set remote access password for `x11vnc` (Ubuntu only)
+  - Installs `openssh-server` for remote command-line access (optional, Ubuntu only)
+  - Set default resolution for VNC access when no monitor is connected
   - Creates a .xprofile file to fix performance issues when accessing x11vnc server remotely over VNC (Ubuntu only)
 
 - Checks if you have already installed Pianoteq and can re-install or uninstall it if you want
