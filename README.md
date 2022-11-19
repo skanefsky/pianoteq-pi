@@ -1,24 +1,21 @@
-# pianoteq-pi
+# pianoteq-sff
 
-> Install Pianoteq and tweak your system on Raspberry Pi in one line ⚡️
+> Script to install and run [Pianoteq](https://pianoteq.com/) in a headless configuration (i.e. no keyboard/monitor/mouse) on small-form-factor (SFF) computers running Raspberry Pi OS or Ubuntu MATE.  Other distributions may work but have not been tested.
 
-[Pianoteq](https://pianoteq.com/) is probably the only top-notch virtual piano in the world that can be installed on Raspberry Pi. 
-And `pianoteq-pi` might be the fastest way to install Pianoteq onto your Raspberry Pi.
-
-> This is an early version, only tested on Raspberry Pi 4B + Raspberry Pi OS 64bit + Pianoteq 7 Stage & Standard edition. Use at your own risk.
+> Based on youfou's pianoteq-pi with updates to support the current release of Raspberry Pi OS and Ubunto MATE as of November 2022.
 
 ## How to use
 
-1. Install [Raspberry Pi OS (64 bit)](https://downloads.raspberrypi.org/raspios_arm64/images/) on your Raspberry Pi.
-2. Download Pianoteq from [the official website](https://pianoteq.com/), and put the 7z/zip package you got into your Raspberry Pi.
-   - Or download directly on your Raspberry Pi.
-3. Run the following command in the same folder of the 7z/zip package:
+1a. Install your preferred Linux distribution:
+   - [Raspberry Pi OS (64 bit)](https://downloads.raspberrypi.org/raspios_arm64/images/) for Raspberry Pi.
+   - [Ubuntu MATE (64-bit)] for Raspberry Pi or other SFF computer such as [MeLE Quieter3C](https://ww.amazon.com/gp/product/B0B765VF84)
+   - 
+3. Download Pianoteq from [the official website](https://pianoteq.com/) onto your SFF (either demo or licensed copy will work).
+4. Run the following command in the same folder of the 7z/zip package:
 ```shell
 wget -qO setup.py https://git.io/JqVD6 && sudo python3 setup.py
 ```
 Simple as that.
-
-![](https://raw.githubusercontent.com/youfou/pianoteq-pi/main/recording.gif)
 
 After installed in this way, Pianoteq will run headlessly (No GUI, to get better performance) on every system boot.
 If you want to adjust something on it, just double click the desktop icon to open GUI.
