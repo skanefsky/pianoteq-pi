@@ -25,7 +25,7 @@ If you want to adjust something on it, just double click the desktop icon to ope
 1. Installs dependencies:
    - `p7zip-full` - to extract the Pianoteq 7z/zip package
    - `cpufrequtils` - to improve CPU performance while running Pianoteq
-   - lowlatency linux kernel for better performance (optional, Ubuntu only)
+   - `linux-image-lowlatency` - low latency linux kernel for better performance (optional, Ubuntu only)
 2. Extracts the Pianoteq 7z/zip package in your preferred location.
 3. Creates a service to set the CPU to performance mode at boot time.
 7. Creates a system service to run Pianoteq headlessly at boot time.
