@@ -1,6 +1,6 @@
 # pianoteq-sff
 
-> Script to install and run [Pianoteq](https://pianoteq.com/) in a headless configuration (i.e. no keyboard/monitor/mouse) on small-form-factor (SFF) computers running Raspberry Pi OS or Ubuntu MATE (other distributions may work but have not been tested).
+> Script to install and run Modartt's [Pianoteq](https://pianoteq.com/) in a headless configuration (i.e. no keyboard/monitor/mouse) on small-form-factor (SFF) computers running Raspberry Pi OS or Ubuntu MATE (other distributions may work but have not been tested).
 
 > Based on youfou's pianoteq-pi with updates to support the current release of Raspberry Pi OS (as of November 2022) and new support for Ubuntu MATE.
 
@@ -21,21 +21,28 @@ If you want to adjust something on it, just double click the desktop icon to ope
 
 ## What this script actually does?
 
-1. Installs dependencies:
-   - `p7zip-full` - to extract the Pianoteq 7z/zip package
-   - `cpufrequtils` - to improve CPU performance while running Pianoteq
+
+- Installs dependencies:
    - `linux-image-lowlatency` - low latency linux kernel for better performance (optional, Ubuntu only)
-2. Extracts the Pianoteq 7z/zip package in your preferred location.
-3. Creates a service to set the CPU to performance mode at boot time.
-7. Creates a system service to run Pianoteq headlessly at boot time.
-4. Creates a `start.sh` script under the Pianoteq folder which:
-  - stops the headless Pianoteq service
-  - runs Pianoteq in GUI mode to make changes or use interactively
-  - restarts the headless Pianoteq service when you quit the GUI.
-6. Creates a desktop entry for Pianoteq, so you can open the GUI easily by clicking the icon
-8. Set a default resolution so that you can run Pianoteq while not connecting to a display
-9. Overclocks the CPU to 2000 MHz at the 6th voltage level to get better performance as well (Raspberry Pi OS only)
-10. Disables smsc95xx.turbo_mode as Pianoteq officially advised (Raspberry Pi OS only)
-11. Installs x11vnc server and openssh-server for remote access when running headless (optional, Ubuntu only)
-13. Modifies the "account limits" as Pianoteq officially advised
-14. Checks if you have already installed Pianoteq and can re-install or uninstall it if you want
+
+- Installs Pianoteq:
+  - Installs `p7zip-full` to extract the Pianoteq 7z/zip package
+  - Extracts the Pianoteq 7z/zip package in your preferred location.
+  - Creates a system service to run Pianoteq in the background (no GUI) at boot time.
+  - Adds permissions in /etc/sudoers.d for the user to start/stop the Pianoteq service
+  - Creates a desktop icon and a start.sh script for Pianoteq, so you can open the GUI easily by clicking the icon.
+
+- Configures performance optimizations
+  - Installs `cpufrequtils` to allow CPU performance to be configured.
+  - Creates a service to set the CPU to performance mode at boot time.
+  - Disables smsc95xx.turbo_mode as Pianoteq officially advised (Raspberry Pi OS only)
+  - Modifies the "account limits" as Modartt officially advises
+  - Overclocks the CPU to 2000 MHz at the 6th voltage level to get better performance as well (optional, Raspberry Pi OS only)
+  - Installs `linux-image-lowlatency` kernel to improve Pianoteq performance (optional, Ubuntu only).
+
+- Configures remote access for VNC and ssh access:
+  - Installs `x11vnc` and `openssh-server` for remote access when running headless (optional, Ubuntu only)
+  - Set default resolution so that you can run Pianoteq while not connecting to a display
+  - Creates a .xprofile file to fix performance issues when accessing x11vnc server remotely over VNC (Ubuntu only)
+
+- Checks if you have already installed Pianoteq and can re-install or uninstall it if you want
