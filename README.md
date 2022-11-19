@@ -7,7 +7,7 @@
 ## How to use
 
 1a. Install your preferred Linux distribution:
-   - [Raspberry Pi OS (64 bit)](https://downloads.raspberrypi.org/raspios_arm64/images/)) for Raspberry Pi.
+   - [Raspberry Pi OS (64 bit)](https://downloads.raspberrypi.org/raspios_arm64/images/) for Raspberry Pi.
    - [Ubuntu MATE (64-bit)](https://ubuntu-mate.org/download/) for Raspberry Pi or other SFF computer such as [MeLE Quieter3C](https://ww.amazon.com/gp/product/B0B765VF84)
    - 
 3. Download Pianoteq from [the official website](https://pianoteq.com/) onto your SFF (either demo or licensed copy will work).
